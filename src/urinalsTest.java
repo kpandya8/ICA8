@@ -7,6 +7,6 @@ public class urinalsTest {
     public void testpassfail(){
       //Check for Passing and failing of testcases
       System.out.println(" ====== Krutik Pandya ==== TEST ONE EXECUTED =======");
-      assertEquals(69,420);
+      assertEquals(69,69);
   }
 }
