@@ -1,10 +1,12 @@
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class urinalsTest {
-    //Testcases
     @Test
-    public void SampleTest1() {
-
-    }
+    public void testpassfail(){
+      //Check for Passing and failing of testcases
+      System.out.println(" ====== Krutik Pandya ==== TEST ONE EXECUTED =======");
+      assertEquals(69,420);
+  }
 }
