@@ -8,14 +8,14 @@ public class UrinalsTest {
     @Test
     public void testpassfail(){
       //Check for Passing and failing of testcases
-      System.out.println(" ====== Krutik Pandya ==== TEST ONE EXECUTED =======");
+      System.out.println(" ====== Krutik Pandya ==== TEST ZERO EXECUTED =======");
       assertEquals(69,69);
   }
 
     @Test
     public void testInputStringValidity(){
-        //Check for Passing and failing of testcases
-        System.out.println(" ====== Krutik Pandya ==== TEST TWO EXECUTED =======");
+        //Check for Input String Validity
+        System.out.println(" ====== Krutik Pandya ==== TEST ONE EXECUTED =======");
         //Test cases that gives true value and follows the unwritten rule
         assertEquals(true, Urinals.goodString("10101"));
         assertEquals(true, Urinals.goodString("1001"));
@@ -33,8 +33,8 @@ public class UrinalsTest {
 
     @Test
     public void testStringLength(){
-        //Check for Passing and failing of testcases
-        System.out.println(" ====== Krutik Pandya ==== TEST THREE EXECUTED =======");
+        //Check for String Length
+        System.out.println(" ====== Krutik Pandya ==== TEST TWO EXECUTED =======");
         //String is null
         assertEquals(false, Urinals.goodString(""));
         //String length is greater than 20
@@ -47,8 +47,8 @@ public class UrinalsTest {
     }
     @Test
     public void testStringFor11s(){
-        //Check for Passing and failing of testcases
-        System.out.println(" ====== Krutik Pandya ==== TEST FOUR EXECUTED =======");
+        //Check for String for 11's
+        System.out.println(" ====== Krutik Pandya ==== TEST THREE EXECUTED =======");
         //String has consecutive 11's
         assertEquals(false, Urinals.goodString("11"));
         //String has consecutive 11's, 01's, 00's, 10's
@@ -58,4 +58,19 @@ public class UrinalsTest {
         assertEquals(true, Urinals.goodString("01"));
         assertEquals(true, Urinals.goodString("000"));
     }
+
+    @Test
+    public void testStringForValidOutput(){
+        //Check for Valid Output
+        System.out.println(" ====== Krutik Pandya ==== TEST FOUR EXECUTED =======");
+        //String output based on the example
+        assertEquals(1, Urinals.urinalsAvailable("10001"));
+        assertEquals(0, Urinals.urinalsAvailable("1001"));
+        assertEquals(3, Urinals.urinalsAvailable("00000"));
+        assertEquals(2, Urinals.urinalsAvailable("0000"));
+        assertEquals(1, Urinals.urinalsAvailable("01000"));
+        assertEquals(-1, Urinals.urinalsAvailable("011"));
+    }
+
+
 }
