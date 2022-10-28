@@ -74,7 +74,7 @@ public class UrinalsTest {
 
     @Test
     public void testOpenFile(){
-        //Check if it reads the file
+        //Check if it opens the file
         System.out.println(" ====== Krutik Pandya ==== TEST FIVE EXECUTED =======");
         //String output based on the example
         assertEquals(0, Urinals.openFile());
@@ -86,6 +86,16 @@ public class UrinalsTest {
         System.out.println(" ====== Krutik Pandya ==== TEST SIX EXECUTED =======");
         //String output based on the example
         testOpenFile();
-        assertEquals(0, Urinals.openFile());
+        assertEquals(0, Urinals.readFile());
+    }
+
+    @Test
+    public void testGenerateFile(){
+        //Check if it generates the file
+        System.out.println(" ====== Krutik Pandya ==== TEST SEVEN EXECUTED =======");
+        //String output based on the example
+        testOpenFile();
+        testReadFile();
+        assertEquals(0, Urinals.generateOutput());
     }
 }
