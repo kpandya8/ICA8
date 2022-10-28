@@ -127,7 +127,7 @@ public class Urinals {
     }
 
     public static void main(String[] args) {
-
+        //Choose from two options: 1)To enter value using keyboards. 2)Read data from urinal.dat
         int x;
         Scanner console = new Scanner(System.in);
         System.out.print("Choose: /n 1. To enter User Input. /n 2. Get data from file. ");
