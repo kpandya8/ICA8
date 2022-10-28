@@ -108,7 +108,7 @@ public class Urinals {
                 break;
             }
             int out = urinalsAvailable(in_str);
-            System.out.print("Free urinals that can be used as per the Unwritten rule are: " + out);
+            System.out.print("Free urinals that can be used as per the Unwritten rule are: " + out + "/n");
         }
     }
 
@@ -128,11 +128,18 @@ public class Urinals {
 
     public static void main(String[] args) {
 
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Enter how ");
-       //getString();
-       openFile();
-       readFile();
-       generateOutput();
+        int x;
+        Scanner console = new Scanner(System.in);
+        System.out.print("Choose: /n 1. To enter User Input. /n 2. Get data from file. ");
+        x = console.nextInt();
+        switch (x) {
+            case 1 -> getString();
+            case 2 -> {
+                openFile();
+                readFile();
+                generateOutput();
+            }
+            default -> System.out.println("Invalid input");
+        }
     }
 }

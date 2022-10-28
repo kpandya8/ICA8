@@ -72,5 +72,12 @@ public class UrinalsTest {
         assertEquals(-1, Urinals.urinalsAvailable("011"));
     }
 
+    @Test
+    public void testReadFile(){
+        //Check if it reads the file
+        System.out.println(" ====== Krutik Pandya ==== TEST FIVE EXECUTED =======");
+        //String output based on the example
+        assertEquals(0, Urinals.openFile());
+    }
 
 }
