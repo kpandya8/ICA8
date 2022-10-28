@@ -1,10 +1,13 @@
 //Authour: Krutik Pandya (1225833793) kpandya8
 
+import java.io.*;
 import java.util.*;
 
 public class Urinals {
     //create urinals.java class that works as a shell class
+    static BufferedReader file_input;
 
+    static ArrayList<Integer> out_list = new ArrayList<>();
     public static int urinalsAvailable(String urinals){
         //available urinals "0's"
         //System.out.print("check if urinal is available");
@@ -37,9 +40,63 @@ public class Urinals {
         return counter;
 
     }
-    public void readFile(){
-    //Read the file
+
+    public static int openFile(){
+        try {
+            file_input = new BufferedReader(new FileReader("src/urinal.dat"));
+        } catch (FileNotFoundException e) {
+            return -1;
+        }
+        return 0;
     }
+
+
+    public static int readFile() {
+        String line;
+        out_list = new ArrayList<>();
+        try {
+            if((line = file_input.readLine()) == null){
+                return -1;
+            }
+            while((line) != null) {
+                    out_list.add(urinalsAvailable(line));
+                line = file_input.readLine();
+            }
+        } catch (IOException e) {
+            return -2;
+        }
+        return 0;
+    }
+
+    public static int generateOutput() {
+        int counter = 1;
+        File f = new File("rule.txt");
+        while(f.exists()) {
+            f = new File("rule" + counter + ".txt");
+            counter++;
+        }
+        FileWriter out;
+        try {
+            out = new FileWriter(f);
+        } catch (IOException e) {
+            return-1;
+        }
+        for (Integer integer : out_list) {
+            try {
+                out.write(integer + "\n");
+            } catch (IOException e) {
+                return -1;
+            }
+        }
+        try {
+            out.close();
+        } catch (IOException e) {
+            return -1;
+        }
+        return 0;
+    }
+
+
     public static void getString() {
         //Get String from the file
 
@@ -54,9 +111,7 @@ public class Urinals {
             System.out.print("Free urinals that can be used as per the Unwritten rule are: " + out);
         }
     }
-    public void generateOutput(){
-    //Output a file that gives free urinals
-    }
+
     static Boolean goodString(String in_str) { // checks to see if valid string
         //System.out.println("Not yet implemented");
         if (in_str.length()<1) return false;
@@ -72,6 +127,12 @@ public class Urinals {
     }
 
     public static void main(String[] args) {
-       getString();
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter how ");
+       //getString();
+       openFile();
+       readFile();
+       generateOutput();
     }
 }
