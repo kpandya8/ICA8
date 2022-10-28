@@ -45,4 +45,17 @@ public class UrinalsTest {
         assertEquals(true, Urinals.goodString("1"));
         assertEquals(true, Urinals.goodString("0"));
     }
+    @Test
+    public void testStringFor11s(){
+        //Check for Passing and failing of testcases
+        System.out.println(" ====== Krutik Pandya ==== TEST FOUR EXECUTED =======");
+        //String has consecutive 11's
+        assertEquals(false, Urinals.goodString("11"));
+        //String has consecutive 11's, 01's, 00's, 10's
+        assertEquals(false, Urinals.goodString("11010001101000110"));
+        //String has no 11's
+        assertEquals(true, Urinals.goodString("10101"));
+        assertEquals(true, Urinals.goodString("01"));
+        assertEquals(true, Urinals.goodString("000"));
+    }
 }
