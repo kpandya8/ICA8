@@ -102,13 +102,13 @@ public class Urinals {
 
             Scanner sc = new Scanner(System.in);
             while (true) {
-            System.out.print("Enter the keyboard input string for urinals:");
+            System.out.print("Enter the keyboard input string for urinals:(To end loop enter`-1`)");
             String in_str = sc.next();
             if(in_str.equals("-1")){
                 break;
             }
             int out = urinalsAvailable(in_str);
-            System.out.print("Free urinals that can be used as per the Unwritten rule are: " + out + "/n");
+            System.out.print("Free urinals that can be used as per the Unwritten rule are: " + out + "\n");
         }
     }
 
@@ -130,7 +130,8 @@ public class Urinals {
         //Choose from two options: 1)To enter value using keyboards. 2)Read data from urinal.dat
         int x;
         Scanner console = new Scanner(System.in);
-        System.out.print("Choose: /n 1. To enter User Input. /n 2. Get data from file. ");
+        System.out.print("Choose: \n 1. To enter User Input. \n 2. Get data from file. ");
+        System.out.print("\n Enter your choice: ");
         x = console.nextInt();
         switch (x) {
             case 1 -> getString();
