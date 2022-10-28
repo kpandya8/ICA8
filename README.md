@@ -40,8 +40,3 @@ JUST THE NUMBER of free urinals. Given the above output, your rule.txt file shou
 2
 1
 -1
-
-### To Do:
-1] Create an code that takes two types of input, 1.From the user Keyboard and 2. From .dat files.
-2] If the string has valid input and has free urinal it should return the number of free spots available.
-3] If there are two spaces consecutive then it should return -1.
