@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3f92e38-0b1a-4507-9c7d-ef2061eb0019" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/urinals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/urinalsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Urinals.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Urinals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Urinals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UrinalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UrinalsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +42,8 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration name="urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="urinals" />
+    <configuration name="Urinals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Urinals" />
       <module name="SER515 ICA" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -52,7 +51,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.urinals" />
+        <item itemvalue="Application.Urinals" />
       </list>
     </recent_temporary>
   </component>

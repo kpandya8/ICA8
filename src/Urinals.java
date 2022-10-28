@@ -58,12 +58,13 @@ public class Urinals {
     //Output a file that gives free urinals
     }
     static Boolean goodString(String in_str) { // checks to see if valid string
-        System.out.println("Not yet implemented");
+        //System.out.println("Not yet implemented");
+        if (in_str.length()<1) return false;
         if (in_str.length()>20) return false;
         if (in_str.contains("11")) return false;
         char[] urinals_array = in_str.toCharArray();
         for (int i = 0; i < urinals_array.length - 1; i++){
-            if(urinals_array[i]!='0'&& urinals_array[i]!='0'){
+            if(urinals_array[i]!='0'&& urinals_array[i]!='1'){
                 return false;
             }
         }
